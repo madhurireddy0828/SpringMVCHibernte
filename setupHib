@@ -1,0 +1,15 @@
+1. create DWP
+2. import external jars
+3. need web.xml
+4. add <servlet> for Dispatcher Servlet
+5. add springs.xml
+6.we don't have to write Hibernate.xml
+[hiberante config has to be written in springs.xml
+7.For working with hibernate we need SessionFactory obj.
+8.spring will create the obj for SessionFactory.
+9.we need to write a bean tag for SessionFactory.
+10.For SessionFactory dependency is the data Sources.
+11.we need to write a bean tag for the data source.
+12.For data source you have to specify driver class name,url,password.
+13.And for SessionFactory we need to mention the hibernate properties.
+

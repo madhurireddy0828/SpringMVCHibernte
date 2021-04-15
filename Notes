@@ -1,0 +1,152 @@
+Req 1:My Profile
+-----------
+Under My profile show  "Change password" and "Update Profile".
+
+Req 2:[Add new column userType ]
+-----------
+  1. add new dropdown userType  - 1.admin  2.user
+  2. Impacted pages are : - >Register + Add new Emp + Update Emp.
+  3. This usertype should be shown in Myprofile + Serach By id + Show ALl emps + Update Emp  
+  
+Req 3:
+------------
+  show all users should show all users except the loggedin User.
+  if there no emp in table it should show "No emps".
+    
+ 
+Req 4: [Show all Users]
+------------------------------
+Add delete link also for every employee.
+
+
+req. 05 (ONLY ADMIN CAN ADD, EDIT AND DELETE OTHER PROFILES)
+-----------------------------------------------------------
+  --> normal user cannot see edit, add and delete links.
+
+  
+req. 06 (column STATUS)
+-----------------------
+  --> new column STATUS
+   		 add emp or register emp value should be active(but not shown),other pages status should be shown
+  --> column is integer 1 or 0
+  
+  --> if status is 1 - show -- active
+  		if status is 0 - show inactive
+      
+  --> in application show active or inactive 
+  --> in database show 0 or 1
+       - only admin can change the status.
+			 - USER can not edit his own status.
+  --> while editing your own profile dont show the status.
+    
+ 	--> if the status is inactive (i.e, 0) -- login fail.
+    	- message : show (your account is inactive, please contact admin).
+  
+        
+req. 07 ( created date should not be updated)
+        
+------------------
+ --> add new column for created date
+ --> created date value should be saved automatically during reg. and while add new emp.
+ --> created date should be shown - show all users, search by id results page.
+ 
+ 
+req. 08 
+-----------------
+
+  --> create a new column -- column name is createdby.
+  --> purpose of the column is to determine who created the profile.
+  --> createdBy should not be updated.
+  --> created by should be shown in  -- search by id page.
+  --> if user creates his own profile then createdBy value should be saved with the login name of the user.
+  --> if admin creates profile then createdBy value should be saved with the login name of the admin.
+
+
+req. 09 
+-----------------
+  --> add new column (number) - column name is attempts 
+  --> if user enters correct user but wrong password exactly five time, account should be locked.
+    
+     ex:	
+					there is a user with Kumar Kumar
+          
+          case1:
+								1. enter Kumar Kumar1 --> invalid login + update attempts column value to 1.
+                2. enter Kumar Kumar1 --> invalid login + update attempts column value to 2.
+                3. enter Kumar Kumar1 --> invalid login + update attempts column value to 3.
+                4. enter Kumar Kumar1 --> invalid login + update attempts column value to 4.
+                5. enter Kumar Kumar1 --> your account is locked + update attempts column value to 5.
+                6. enter Kumar Kumar  --> your account is locked + no changes to attempts column.
+                
+          case2:
+								1. enter Kumar Kumar1 --> invalid login + update attempts column value to 1.
+                2. enter Kumar Kumar1 --> invalid login + update attempts column value to 2.
+                3. enter Kumar Kumar1 --> invalid login + update attempts column value to 3.
+                4. enter Kumar Kumar  --> Login Success + update attempts column value to 0.
+                  
+   
+
+req. 10 (UNLOCK THE ACCOUNT)
+-----------------
+                  
+  --> only admin can unlock.
+  --> admin can unlock the account during the update profile.
+  --> in edit profile we need a check box - will have reset attempts. (by default checkbox is not selected)
+  --> if admin selects the checkbox and clicks on update profile, then attempts will reset to -1.
+    
+    
+  Changes to login page:
+    --> after account is unlocked 
+      - user is login with valid username and password and click on login button then
+        navigate to change password screen.
+      - change password page contain new password, confirm password and change password button.
+			 -once user clicks on change password button reset attempts to 0.
+ 			- on submit go to login page and re-login again with valid credentials
+
+      
+req. 11 
+--------------------------------------------------------------------------
+--> add new menu clients:
+  		- on mousehover show add new client, search client, show all clients
+ --> admin can add clients
+ --> every client will contain client name, gst and client address + create a date
+ --> address will contain street no, city, district, state, country and pin.
+
+        
+req. 12
+-----------------------------
+ --> add new menu branch:
+  		- on mousehover show add new branch, search branch, show all branches
+ --> admin can add branch
+ --> every bbranch will contain branch name, gst and branch address + create a date.
+ --> address will contain street no, city, district, state, country and pin.
+
+req 13:
+--------
+add validations using validation framework for employee, client , branch
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+ 
+  

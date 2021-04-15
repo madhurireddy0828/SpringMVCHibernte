@@ -1,0 +1,15 @@
+1. create DWP
+2. import external jars for springs mvc + springs jdbc
+3. need web.xml
+   add <servlet> for Dispatcher Servlet
+4. add springs.xml 
+add bean tag for viewResolver
+
+5.For working with springs-jdbc we need JdbcTemplate obj.
+6.spring will create the obj for JdbcTemplate.
+7.we need to write a bean tag for JdbcTemplate.
+8.For JdbcTemplate, then dependency is the data Source
+9.we need to write a bean tag for the data source.
+10.For data source you have to specify driver class name,url,password.
+
+
